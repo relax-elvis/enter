@@ -1,0 +1,227 @@
+*
+	box-sizing: border-box
+	&:before, &:after
+		box-sizing: border-box
+
+html, body
+	height: 100%
+
+body
+	font-size: 1em
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	overflow-x: hidden
+	opacity: 1
+	font-family: $roboto
+	font-weight: 400
+	color: $black
+	background: $white
+	max-width: 1623px
+	margin: 0 auto
+	
+h1 
+	font-family: $cooperstd
+	font-size: 3.4375em
+	font-weight: 900
+	line-height: 1.05
+	margin: 0px 0 2px
+
+
+
+h1.title,
+span.h3,
+h3 
+	font-size: 2.15em
+	font-weight: 200
+	line-height: 45px
+	margin-top: 25px
+	display: block
+	margin-bottom: 34px
+
+
+h3.title-green
+	font-family: $roboto
+	font-size: 20px
+	font-weight: bold
+	font-stretch: normal
+	font-style: normal
+	line-height: 1.5
+	letter-spacing: normal
+	color: #36a59d
+	margin-bottom: 16px
+
+
+span.h4 
+	font-size: 2.81em
+	line-height: 1.11
+	font-weight: 200
+	margin: 0
+	display: block
+
+
+p
+	font-family: $roboto
+	font-size: 1.125em
+	line-height: 1.45
+	margin: 0
+	margin-bottom: 23px
+	
+ul 
+	list-style: none
+
+	&.style-none
+		padding: 0
+		margin: 0
+		list-style: none
+
+img 
+	max-width: 100%
+	max-height: 100%
+
+a 
+	text-decoration: none
+
+b 
+	font-weight: 600
+
+form 
+	font-family: 'Roboto', sans-serif
+	input::-webkit-input-placeholder  /* Chrome/Opera/Safari */
+		color: #b4b4b4
+	input::-moz-placeholder  /* Firefox 19+ */
+		color: #b4b4b4
+	input:-ms-input-placeholder  /* IE 10+ */
+		color: #b4b4b4
+	input:-moz-placeholder  /* Firefox 18- */
+		color: #b4b4b4
+	textarea::-webkit-input-placeholder  /* Chrome/Opera/Safari */
+		color: #b4b4b4
+	textarea::-moz-placeholder  /* Firefox 19+ */
+		color: #b4b4b4
+	textarea:-ms-input-placeholder  /* IE 10+ */
+		color: #b4b4b4
+	textarea:-moz-placeholder  /* Firefox 18- */
+		color: #b4b4b4
+
+	input.error,
+	textarea.error
+		box-shadow: 0px 0px 0px 2px $error_color
+
+	input:not([type=checkbox]),
+	textarea
+		background: $white
+		font-size: 0.875em
+		border: 0
+		border-radius: 0
+		width: 100%
+		font-weight: 400
+		display: block
+
+		font-family: $roboto
+		font-weight: normal
+		font-stretch: normal
+		font-style: normal
+		line-height: 1.86
+		letter-spacing: normal
+		color: $light-green
+
+	input:not([type=checkbox])
+		padding: 17px 20px 9px
+		margin-bottom: 26px
+	textarea
+		padding: 16px 19px
+		margin-bottom: 8px
+		min-height: 91px
+		resize: none
+
+	button[type="submit"]
+		padding: 7px 15px 5px
+		width: 132px
+
+
+table 
+	text-align: center
+	border: 1px solid #d0d0d0
+	padding: 0
+	margin: 0
+	width: 100%
+	thead
+		th 
+			background-color: #36a59d
+			font-size: 1.25em
+			font-weight: bold
+			font-stretch: normal
+			font-style: normal
+			line-height: 2.85
+			letter-spacing: normal
+			color: $white
+			padding: 11px 5px 9px
+			text-align: center
+			text-transform: uppercase
+			border-right: 1px solid #d0d0d0
+			border-bottom: 1px solid #d0d0d0
+			width: 188px
+			&:last-child
+				border-right: 0
+
+	tbody 
+		tr 
+			&:last-child
+				td 
+					border-bottom: 0
+		td 
+			font-size: 1.25em
+			font-weight: 300
+			font-stretch: normal
+			font-style: normal
+			line-height: 2.85
+			letter-spacing: normal
+			color: $light-green
+			text-align: center
+			padding: 10px 5px
+			border-right: 1px solid #d0d0d0
+			border-bottom: 1px solid #d0d0d0
+			&:last-child
+				border-right: 0
+
+$cub_size_repeat: 45px
+$cub_size_repeat2: 90px
+
+$cub_size_repeat_benefit: 35px
+$cub_size_repeat2_benefit: 70px
+
+.cubic-before-after
+	position: relative
+	&::before,
+	&::after
+		content: ''
+		display: block 
+		width: 100%
+		height: $cub_size_repeat
+		position: absolute
+		left: 0
+		right: 0
+		bottom: $cub_size_repeat
+		background: repeating-linear-gradient(90deg, #A8DDCF, #A8DDCF $cub_size_repeat, #FFF3DB $cub_size_repeat, #FFF3DB $cub_size_repeat2)
+
+	&::after 
+		bottom: 0
+		background: repeating-linear-gradient(90deg, #FFF3DB, #FFF3DB $cub_size_repeat, #FF8D2B $cub_size_repeat, #FF8D2B $cub_size_repeat2)
+
+
+	&.cubic-small
+		&::before,
+		&::after
+			content: ''
+			height: $cub_size_repeat_benefit
+			bottom: $cub_size_repeat_benefit
+			background: repeating-linear-gradient(90deg, #FFF3DB, #FFF3DB $cub_size_repeat_benefit, #A8DDCF $cub_size_repeat_benefit, #A8DDCF $cub_size_repeat2_benefit)
+
+		&::after 
+			bottom: 0
+			background: repeating-linear-gradient(90deg, #FF8D2B, #FF8D2B $cub_size_repeat_benefit, #FFF3DB $cub_size_repeat_benefit, #FFF3DB $cub_size_repeat2_benefit)
+
+
+.text-center
+	text-align: center

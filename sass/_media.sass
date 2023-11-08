@@ -1,0 +1,421 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.container, 
+	.container-lg, 
+	.container-md, 
+	.container-sm, 
+	.container-xl
+		padding-left: 15px !important
+		padding-right: 15px !important
+
+//@media only screen and (max-width: 1168px)
+
+//@media only screen and (max-width: 1000px)
+	
+/* Medium Devices, Desktops */
+//@media only screen and (max-width : 992px)
+	
+
+//@media only screen and (max-width: 767px)
+
+
+/* Small Devices, Tablets */
+//@media only screen and (max-width: 766px)
+
+
+/* Extra Small Devices, Phones */
+//@media only screen and (max-width : 575px)
+	
+
+/* Custom, iPhone Retina */
+//@media only screen and (max-width : 375px)
+
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 1024px)
+	
+	header
+		.mobile_block
+			display: block
+			overflow: hidden
+		.pc_block
+			display: none !important
+
+		.logotype
+			text-align: left
+
+			.logo-desc
+				text-align: left
+
+		.btn-mobile
+			float: right
+			.item 
+				width: 66px
+				height: 5px
+				background: #ff6b57
+				display: block
+				margin-bottom: 10px
+
+				&:last-child
+					margin-bottom: 0
+
+	.en
+		&_benefit
+			.container 
+				max-width: 565px
+
+				& > .row 
+					row-gap: 42px
+
+		&_blog 
+			.item
+				&:last-child
+					padding-bottom: 189px
+				&:nth-child(odd)
+					.row 
+						flex-direction: column-reverse
+
+			&__descr 
+				.title
+					text-align: center
+
+		&_contact
+			padding-top: 134px
+
+			.container
+				max-width: 662px
+
+			&__form 
+				max-width: 100%
+
+				
+
+
+	footer 
+		top: 0
+		padding-top: 46px
+		padding-bottom: 49px
+		font-size: 9px
+
+		.container 
+			max-width: 565px
+		p 
+			text-align: center
+		.right 
+			margin-top: 19px	
+
+
+		.d-flex 
+			flex-wrap: wrap
+			justify-content: space-between	
+
+		.logotype 
+			.logo-desc
+				font-size: 6px
+		.block 
+			&_center
+				width: 100%
+				order: 1
+				margin-bottom: 20px
+
+			&_left
+				order: 2
+				width: 40%
+			&_right
+				order: 3
+				width: 60%
+
+				.copyrigth
+					display: none
+
+
+
+
+@media only screen and (max-width : 575px)
+	.container, 
+	.container-lg, 
+	.container-md, 
+	.container-sm, 
+	.container-xl
+		padding-left: 36px!important
+		padding-right: 36px!important
+	body 
+		font-size: 10px
+	h3
+		&.title-green
+			font-size: 18px
+	article 
+		p 
+			font-size: 1.6em
+	form 
+		input
+			&:not([type='checkbox'])
+				font-size: 14px
+				padding: 10px 8px 8px 8px
+				margin-bottom: 11px
+		input,
+		textarea
+			font-size: 14px
+		textarea 
+			padding: 12px 7px
+			min-height: 94px
+			margin-bottom: 0
+		button[type="submit"]
+			width: 100%
+			max-width: 100%
+		.field
+			&.group
+				flex-wrap: wrap
+				& > div 
+					width: 100%
+			&.checkbox
+				flex-wrap: wrap
+				font-size: 12.7px
+				white-space: nowrap
+				margin-top: 0
+				& > div 
+					width: 100%
+				label 
+					display: block
+					input[type="checkbox"]
+						margin-right: 0
+					span 
+						display: inline
+				.right 
+					margin-top: 18px
+				.btn-blue 
+					font-size: 16px
+					line-height: 26px
+					padding: 12px 15px 11px
+					text-transform: none
+
+	
+
+	.btn 
+		font-size: 14px
+		padding: 6px 13px
+
+	$cub_size_repeat: 32px
+	$cub_size_repeat2: 64px
+
+	$cub_size_repeat_benefit: 32px
+	$cub_size_repeat2_benefit: 64px
+
+	.cubic-before-after
+		position: relative
+		&::before,
+		&::after
+			height: $cub_size_repeat
+			bottom: $cub_size_repeat
+			background: repeating-linear-gradient(90deg, #A8DDCF, #A8DDCF $cub_size_repeat, #FFF3DB $cub_size_repeat, #FFF3DB $cub_size_repeat2)
+
+		&::after 
+			bottom: 0
+			background: repeating-linear-gradient(90deg, #FFF3DB, #FFF3DB $cub_size_repeat, #FF8D2B $cub_size_repeat, #FF8D2B $cub_size_repeat2)
+
+
+		&.cubic-small
+			&::before,
+			&::after
+				content: ''
+				height: $cub_size_repeat_benefit
+				bottom: $cub_size_repeat_benefit
+				background: repeating-linear-gradient(90deg, #FFF3DB, #FFF3DB $cub_size_repeat_benefit, #A8DDCF $cub_size_repeat_benefit, #A8DDCF $cub_size_repeat2_benefit)
+
+			&::after 
+				bottom: 0
+				background: repeating-linear-gradient(90deg, #FF8D2B, #FF8D2B $cub_size_repeat_benefit, #FFF3DB $cub_size_repeat_benefit, #FFF3DB $cub_size_repeat2_benefit)
+				
+	header 
+		padding-top: 30px
+		padding-bottom: 30px
+		.row>*
+			width: 50%
+
+		.logotype 
+			max-width: 74px
+			.logo-desc
+				display: none
+
+		.btn-mobile 
+			.item
+				width: 38px
+				margin-bottom: 5px
+
+
+	.en 
+		&_banner
+			padding-top: 14.5vh
+			padding-bottom: 96px		
+
+		&_benefit
+			padding-top: 111px
+			padding-bottom: 102px
+			.container 
+				&>.row 
+					row-gap: 45px
+			&__block	
+				img 
+					max-width: 87px
+
+				.title 
+					font-size: 15px
+					line-height: 1.1
+					max-width: 135px
+					margin-top: 12px
+					margin-bottom: 15px
+
+				p 
+					font-size: 16px
+					max-width: 194px
+
+		&_blog
+			.item 
+				padding-top: 62px
+				padding-bottom: 69px
+
+				&.bg-blue,
+				&.bg-red
+					padding-top: 120px
+					padding-bottom: 103px
+
+					.en_blog__descr
+						margin-top: 34px
+
+						.title 
+							margin-bottom: 43px
+
+						p 
+							font-size: 16px
+
+						.block-btn
+							&.right 
+								.btn
+									margin-right: auto
+
+			&__descr 
+				margin-top: 73px
+
+				.title 
+					font-size: 22px
+					margin-bottom: 58px
+
+				p 
+					font-size: 16px
+					margin-bottom: 20px
+
+				.block-btn 
+					text-align: center
+					padding-top: 23px
+
+		&_contact
+			padding-top: 119px
+			padding-bottom: 124px
+
+			&__form 
+				.block-title
+					padding: 16px 15px 31px
+
+					.title 
+						font-size: 21px
+						line-height: 1.1
+						margin-bottom: 13px
+
+					.subtitle
+						font-size: 15px
+						line-height: 1
+
+				form 
+					margin-top: 23px
+					padding: 0 33px 47px
+
+					input:not([type=submit]), 
+					textarea
+						padding: 9px 6px 4px
+						font-size: 12px
+
+					textarea 
+						padding: 14px 11px 4px
+						min-height: 134px
+
+					input[type=submit]
+						font-size: 15px
+						padding: 4px 13px
+						margin: 0
+
+
+					.field 
+						margin-bottom: 20px
+
+	footer 
+		padding-top: 39px
+		.logotype 
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 9px
+		p 
+			font-size: 14px
+		.right 
+			margin-top: 9px
+
+		.block_left
+			font-size: 7px
+
+		.block_right
+			a 
+				font-size: 6px
+
+				
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+	.container, 
+	.container-sm
+		// max-width: 100%
+		max-width: 542px
+		padding-left: 40px
+		padding-right: 40px
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 767px)
+	/**/
+	// .container, 
+	// .container-lg, 
+	// .container-md, 
+	// .container-sm, 
+	// .container-xl
+	// 	max-width: 99%
+	// 	padding-left: 40px
+	// 	padding-right: 40px
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 1024px)
+	/**/
+	// .container, .container-lg, .container-md, .container-sm, .container-xl
+	// 	max-width: 95%
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+	.container, 
+	.container-lg, 
+	.container-md, 
+	.container-sm, 
+	.container-xl
+		max-width: 1579px
+
+
+@media only screen and (min-width : 1620px)
+	
+	body 
+		max-width: 100%
+	header 
+		padding-top: 43px
+
+	

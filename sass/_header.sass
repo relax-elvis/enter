@@ -1,0 +1,75 @@
+.logotype
+	text-align: center
+	.logo-desc
+		font-family: $cooperstd
+		font-weight: 900
+		font-stretch: normal
+		font-style: normal
+		line-height: normal
+		letter-spacing: normal
+		text-align: center
+		color: #ff6b57
+		display: block
+header
+	background: $bg_white
+	padding-top: 36px
+	padding-bottom: 23px
+
+	.container 
+		.row 
+			align-items: center
+
+	.mobile_block
+		display: none
+
+	.logotype
+		text-align: center
+		.logo-desc
+			font-family: $cooperstd
+			font-size: 10px
+			font-weight: 900
+			font-stretch: normal
+			font-style: normal
+			line-height: normal
+			letter-spacing: normal
+			text-align: center
+			color: #ff6b57
+			display: block
+
+	.header-menu
+		margin-left: auto
+
+		nav 
+			gap: 28px
+
+		.link 
+			.item
+				font-size: 1em
+				font-weight: 500
+				color: #333333
+				text-transform: uppercase
+				transition: all .3s
+
+				position: relative
+
+				&::after
+					position: absolute
+					content: ''
+					width: 0
+					height: 1px
+					background: #333333
+
+				&:hover
+					&::after 
+						content: ''
+						display: block
+						width: 100%
+						animation: linear .2s underline
+
+@keyframes underline
+	0%
+		width: 0
+
+	100%
+		width: 100%
+	
