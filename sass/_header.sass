@@ -10,10 +10,24 @@
 		text-align: center
 		color: #ff6b57
 		display: block
+.js-header
+	&.has-transform-header
+		transform: translateY(-100%)
 header
 	background: $bg_white
 	padding-top: 36px
 	padding-bottom: 23px
+
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 11
+	transition: all .3s
+
+	&.fixed-menu
+		padding-top: 26px
+		padding-bottom: 13px
 
 	.container 
 		.row 
@@ -65,6 +79,7 @@ header
 						display: block
 						width: 100%
 						animation: linear .2s underline
+
 
 @keyframes underline
 	0%

@@ -74,17 +74,7 @@
 				& > .row 
 					row-gap: 42px
 
-		&_blog 
-			.item
-				&:last-child
-					padding-bottom: 189px
-				&:nth-child(odd)
-					.row 
-						flex-direction: column-reverse
-
-			&__descr 
-				.title
-					text-align: center
+		
 
 		&_contact
 			padding-top: 134px
@@ -275,6 +265,17 @@
 				p 
 					font-size: 16px
 					max-width: 194px
+		&_blog 
+			.item
+				&:last-child
+					padding-bottom: 189px
+				&:nth-child(odd)
+					.row 
+						flex-direction: column-reverse
+
+			&__descr 
+				.title
+					text-align: center
 
 		&_blog
 			.item 
@@ -385,6 +386,11 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 767px)
+
+	.container, 
+	.container-md, 
+	.container-sm
+		max-width: 960px
 	/**/
 	// .container, 
 	// .container-lg, 

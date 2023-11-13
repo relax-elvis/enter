@@ -193,6 +193,7 @@ $cub_size_repeat2_benefit: 70px
 
 .cubic-before-after
 	position: relative
+	z-index: 2
 	&::before,
 	&::after
 		content: ''
@@ -204,7 +205,7 @@ $cub_size_repeat2_benefit: 70px
 		right: 0
 		bottom: $cub_size_repeat
 		background: repeating-linear-gradient(90deg, #A8DDCF, #A8DDCF $cub_size_repeat, #FFF3DB $cub_size_repeat, #FFF3DB $cub_size_repeat2)
-
+		z-index: 2
 	&::after 
 		bottom: 0
 		background: repeating-linear-gradient(90deg, #FFF3DB, #FFF3DB $cub_size_repeat, #FF8D2B $cub_size_repeat, #FF8D2B $cub_size_repeat2)
