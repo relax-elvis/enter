@@ -225,12 +225,12 @@
 				
 	header 
 		padding-top: 30px
-		padding-bottom: 30px
+		padding-bottom: 25px
 		.row>*
 			width: 50%
 
 		.logotype 
-			max-width: 74px
+			max-width: 66px
 			.logo-desc
 				display: none
 
@@ -242,11 +242,39 @@
 
 	.en 
 		&_banner
-			padding-top: 14.5vh
-			padding-bottom: 96px		
+			padding-top: 24vh
+			padding-bottom: 96px
+
+			&.cubic-before-after
+				&::before,
+				&::after
+					bottom: -$cub_size_repeat
+
+				&::after 
+					bottom: -($cub_size_repeat*2)
+
+			.title 
+				line-height: 1	
+
+			.subtitle
+				font-size: 15px
+				line-height: 1
+				margin-top: 7px
+
+			p 
+				margin-top: 22px
+				font-size: 15px
+				line-height: 1.1
+
+			.block-btn
+				margin-top: 105px
+
+			.btn 
+				font-size: 15px
+				padding: 10px 27px 5px
 
 		&_benefit
-			padding-top: 111px
+			padding-top: 173px
 			padding-bottom: 102px
 			.container 
 				&>.row 
