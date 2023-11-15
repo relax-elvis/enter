@@ -225,7 +225,7 @@ $(document).ready(function() {
 	}
 	f_scroll();
 
-	const headerMenuBtn = document.querySelector('header .mobile_block .btn-mobile .item');
+	const headerMenuBtn = document.querySelector('header .mobile_block .btn-mobile');
 	const headerMenu = document.querySelector('header');
 	headerMenuBtn.addEventListener('click', function() {
 		if(this.classList.contains('active')) {
